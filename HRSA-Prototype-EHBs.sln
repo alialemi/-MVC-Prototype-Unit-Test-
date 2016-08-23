@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototyped-MVC-WebApplication", "Prototyped-MVC-WebApplication\Prototyped-MVC-WebApplication.csproj", "{1483B3C1-3486-43DD-A647-E4DFA3C54654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRSA.Core.DataAccess", "HRSA.Core.DataAccess\HRSA.Core.DataAccess.csproj", "{C00A8DE0-07CB-41F7-B134-9DB3EE49AFC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HRSA.Core", "HRSA.Core", "{E65C01BD-6576-4F33-9599-24C96D7C8F48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HRSA.WebApplication", "HRSA.WebApplication", "{F6BEC72D-C894-4D29-816F-42AC248B9A4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HRSA.Test", "HRSA.Test", "{9D82870F-D160-419D-AF0E-F0C660FFB6D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1483B3C1-3486-43DD-A647-E4DFA3C54654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1483B3C1-3486-43DD-A647-E4DFA3C54654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1483B3C1-3486-43DD-A647-E4DFA3C54654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1483B3C1-3486-43DD-A647-E4DFA3C54654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C00A8DE0-07CB-41F7-B134-9DB3EE49AFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C00A8DE0-07CB-41F7-B134-9DB3EE49AFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C00A8DE0-07CB-41F7-B134-9DB3EE49AFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C00A8DE0-07CB-41F7-B134-9DB3EE49AFC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C00A8DE0-07CB-41F7-B134-9DB3EE49AFC0} = {E65C01BD-6576-4F33-9599-24C96D7C8F48}
+		{1483B3C1-3486-43DD-A647-E4DFA3C54654} = {F6BEC72D-C894-4D29-816F-42AC248B9A4A}
+	EndGlobalSection
+EndGlobal
