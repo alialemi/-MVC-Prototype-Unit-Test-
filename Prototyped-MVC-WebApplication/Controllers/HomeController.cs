@@ -19,6 +19,7 @@ namespace Prototyped_MVC_WebApplication.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Page = pageService.GetPageByName("Index");
             return View();
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace HRSA.Core.DataAccess.DataModel
 
          public string CreatedBy { get; set; }
 
+         [NotMapped]
          public IList<Feature> Features { get; set; }
     }
 }
