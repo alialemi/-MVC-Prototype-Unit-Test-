@@ -19,7 +19,6 @@ namespace Prototyped_MVC_WebApplication.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Message = pageService.GetPageByName("Index").PageName;
             return View();
         }
 

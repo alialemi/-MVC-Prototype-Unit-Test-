@@ -17,5 +17,7 @@ namespace HRSA.Core.DataAccess.DataModel
          public DateTime CreatedOn { get; set; }
 
          public string CreatedBy { get; set; }
+
+         public IList<Feature> Features { get; set; }
     }
 }
