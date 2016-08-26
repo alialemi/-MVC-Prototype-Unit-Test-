@@ -14,6 +14,7 @@ namespace Prototyped_MVC_WebApplication.App_Start
         {
             Bind<IDbDataContext>().To<PageDbDataContext>();
             Bind<IPageService>().To<PageService>();
+            Bind<IUserService>().To<UserService>();
         }
     }
 }
