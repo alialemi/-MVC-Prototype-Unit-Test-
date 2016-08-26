@@ -20,6 +20,7 @@ namespace Prototyped_MVC_WebApplicationTest.Services
         private Page mockedPage;
         private User mockedUser;
         private IList<Feature> mockedFeatures;
+        private IQueryable<Page> mockedPages;
 
         [TestInitialize]
         public void Setup()
@@ -34,15 +35,14 @@ namespace Prototyped_MVC_WebApplicationTest.Services
             FeatureHelper.CreateFeatureAccess(mockedFeatures, mockedPage, mockedUser, AccessType.None);
             mockedPage.Features = mockedFeatures;
             testUserService.GetUserByUserName(mockedUser.UserName).Returns(mockedUser);
+            mockedPage.PageName = "Index";
+            mockedPages = new List<Page>() { mockedPage }.AsQueryable();
+            testDbContext.Pages.Returns(mockedPages);
         }
 
         [TestMethod]
         public void TestGetPageName()
         {
-            mockedPage.PageName = "Index";
-            var mockedPages = new List<Page>() { mockedPage }.AsQueryable();
-            
-            testDbContext.Pages.Returns(mockedPages);
             var page = pageService.GetPageByName("Index");
             Assert.AreSame(page, mockedPage);
         }
@@ -51,10 +51,14 @@ namespace Prototyped_MVC_WebApplicationTest.Services
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestReadAccessToPage()
         {
-            mockedPage.PageName = "Index";
-            var mockedPages = new List<Page>() { mockedPage }.AsQueryable();
-            testDbContext.Pages.Returns(mockedPages);
             var page = pageService.GetPageByNameUserName("Index", mockedUser.UserName);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void TestWriteAccessToPage()
+        {
+            pageService.SavePageByUserName(mockedPage, "Index");
         }
 
         [TestCleanup]

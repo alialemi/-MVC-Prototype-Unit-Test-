@@ -12,6 +12,7 @@ namespace HRSA.Core.DataAccess.Service
     {
         Page GetPageByName(string pageName);
         Page GetPageByNameUserName(string pageName, string userName);
+        int SavePageByUserName(Page page, string userName);
     }
 
     public class PageService : IPageService
