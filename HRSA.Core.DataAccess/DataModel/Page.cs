@@ -21,5 +21,15 @@ namespace HRSA.Core.DataAccess.DataModel
 
          [NotMapped]
          public IList<Feature> Features { get; set; }
+
+         public bool IsVisibleToUser(User user)
+         {
+             return Features.Any(ft => ft.VisibleToUser(user, this));
+         }
+
+         public bool IsEditableByUser(User user)
+         {
+             return Features.Any(ft => ft.UserCanEdit(user, this));
+         }
     }
 }

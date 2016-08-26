@@ -12,6 +12,7 @@ namespace HRSA.Core.DataAccess.Repository
     public interface IDbDataContext
     {
         IQueryable<Page> Pages { get;}
+        IQueryable<User> Users { get;}
         int SaveChanges();
         void Dispose();
     }
@@ -24,18 +25,27 @@ namespace HRSA.Core.DataAccess.Repository
            
         }
 
-        public IQueryable<Page> Pages {
+        public IQueryable<Page> Pages
+        {
             get
             {
                 return this.Set<Page>();
             }
-            
+        }
+
+        public IQueryable<User> Users
+        {
+            get
+            {
+                return this.Set<User>();
+            }
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Page>().ToTable("Pages");
+            modelBuilder.Entity<User>().ToTable("Users");
             
         }
     }

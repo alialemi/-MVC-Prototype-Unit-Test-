@@ -24,26 +24,11 @@ namespace Prototyped_MVC_WebApplicationTest.DataModel
             mockedFeatures = FeatureHelper.CreateList(5);
             mockedPage.Features = mockedFeatures;
             mockedUser.Accesses = new List<UserAccess>();
-            int cnt = 0;
-            foreach (var ft in mockedFeatures)
-            {
-                cnt++;
-                ft.Pages = new List<Page>();
-                ft.Pages.Add(mockedPage);
-                ft.UserAccesses = new List<UserAccess>();
-                var access = new UserAccess()
-                {
-                    AccessId = cnt,
-                    AccessType = AccessType.Read_Write,
-                    Feature = ft,
-                    Page = mockedPage,
-                    User = mockedUser
-                };
-                mockedUser.Accesses.Add(access);
-                ft.UserAccesses.Add(access);
-            }
-            
+
+            FeatureHelper.CreateFeatureAccess(mockedFeatures, mockedPage, mockedUser, AccessType.Read_Write);
         }
+
+        
 
         [TestMethod]
         public void TestUserVisibileAccess()

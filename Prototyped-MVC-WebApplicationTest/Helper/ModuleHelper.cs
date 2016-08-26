@@ -34,5 +34,30 @@ namespace Prototyped_MVC_WebApplicationTest.Helper
             }
             return retList;
         }
+
+        public static void CreateFeatureAccess(IList<Feature> mockedFeatures,
+            Page mockedPage,
+            User mockedUser,
+            AccessType mockedAccessType)
+        {
+            int cnt = 0;
+            foreach (var ft in mockedFeatures)
+            {
+                cnt++;
+                ft.Pages = new List<Page>();
+                ft.Pages.Add(mockedPage);
+                ft.UserAccesses = new List<UserAccess>();
+                var access = new UserAccess()
+                {
+                    AccessId = cnt,
+                    AccessType = mockedAccessType,
+                    Feature = ft,
+                    Page = mockedPage,
+                    User = mockedUser
+                };
+                mockedUser.Accesses.Add(access);
+                ft.UserAccesses.Add(access);
+            }
+        }
     }
 }

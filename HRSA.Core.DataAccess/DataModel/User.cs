@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace HRSA.Core.DataAccess.DataModel
 
         public string LastName { get; set; }
 
+        [NotMapped]
         public IList<UserAccess> Accesses { get; set; }
 
     }
