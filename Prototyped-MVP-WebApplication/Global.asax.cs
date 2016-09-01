@@ -1,5 +1,7 @@
-﻿using System;
+﻿using HRSA.Core.DataAccess.Repository;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
@@ -16,6 +18,7 @@ namespace Prototyped_MVP_WebApplication
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            Database.SetInitializer<PageDbDataContext>(null);
         }
     }
 }
