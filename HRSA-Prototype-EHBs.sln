@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HRSA.Test", "HRSA.Test", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototyped-MVC-WebApplicationTest", "Prototyped-MVC-WebApplicationTest\Prototyped-MVC-WebApplicationTest.csproj", "{C1074535-ACEA-4F9D-8472-1D92AABED45B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototyped-MVP-WebApplication", "Prototyped-MVP-WebApplication\Prototyped-MVP-WebApplication.csproj", "{8A93A907-740C-4EFB-92E9-841C9E02B088}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,12 +35,17 @@ Global
 		{C1074535-ACEA-4F9D-8472-1D92AABED45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1074535-ACEA-4F9D-8472-1D92AABED45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1074535-ACEA-4F9D-8472-1D92AABED45B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A93A907-740C-4EFB-92E9-841C9E02B088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A93A907-740C-4EFB-92E9-841C9E02B088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A93A907-740C-4EFB-92E9-841C9E02B088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A93A907-740C-4EFB-92E9-841C9E02B088}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1483B3C1-3486-43DD-A647-E4DFA3C54654} = {F6BEC72D-C894-4D29-816F-42AC248B9A4A}
+		{8A93A907-740C-4EFB-92E9-841C9E02B088} = {F6BEC72D-C894-4D29-816F-42AC248B9A4A}
 		{C00A8DE0-07CB-41F7-B134-9DB3EE49AFC0} = {E65C01BD-6576-4F33-9599-24C96D7C8F48}
 		{C1074535-ACEA-4F9D-8472-1D92AABED45B} = {9D82870F-D160-419D-AF0E-F0C660FFB6D3}
 	EndGlobalSection
